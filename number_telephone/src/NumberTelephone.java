@@ -1,5 +1,11 @@
 public class NumberTelephone implements IComparable {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+     private String area_code;
+     private String telephone_number;
+
+    public NumberTelephone(String areaCode, String telephoneNumber) {
+        area_code = areaCode;
+        telephone_number = telephoneNumber;
     }
+
+
 }
