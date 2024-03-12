@@ -1,7 +1,7 @@
 public class Firm extends Post{
     private String name;
     private  String address;
-    private NumberTelephone numberTelephone;
+      public NumberTelephone numberTelephone;
 
     public Firm(String name, String address, NumberTelephone numberTelephone) {
         this.name = name;
