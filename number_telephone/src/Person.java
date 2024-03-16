@@ -15,4 +15,13 @@ public class Person extends Post{
     public void desciption() {
         System.out.println("Person:"+ name + " "+ lastname + ", Adress:" + address + ", Telephone:"+numberTelephone);
     }
+    public int compareTo(Person o){
+        int compareLastname = this.lastname.compareTo(o.lastname);
+
+        if (compareLastname!=0){
+            return compareLastname;
+        }
+
+        return this.name.compareTo(o.name);
+    }
 }

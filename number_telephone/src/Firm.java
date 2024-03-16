@@ -12,6 +12,11 @@ public class Firm extends Post{
 
     @Override
     public void desciption() {
-        System.out.println("Person:"+ name + " " + ", Adress:" + address + ", Telephone:"+numberTelephone);
+        System.out.println("Firm:"+ name + " " + ", Adress:" + address + ", Telephone:"+numberTelephone);
+    }
+
+    public  int compareTo(Firm o){
+
+        return this.name.compareTo(o.name);
     }
 }
