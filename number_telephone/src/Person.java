@@ -1,18 +1,20 @@
-public class Person extends Post{
-    private  String name;
+public class Person extends Post {
+    private String name;
     private String lastname;
     private String address;
-     public   NumberTelephone numberTelephone;
 
     public Person(String name, String lastname, String address, NumberTelephone numberTelephone) {
+        super(numberTelephone); // Wywołaj konstruktor klasy bazowej Post
         this.name = name;
         this.lastname = lastname;
         this.address = address;
-        this.numberTelephone = numberTelephone;
     }
-
     @Override
-    public void desciption() {
+    public String getAddress() {
+        return address;
+    }
+    @Override
+    public void description() {
         System.out.println("Person:"+ name + " "+ lastname + ", Adress:" + address + ", Telephone:"+numberTelephone);
     }
     public int compareTo(Person o){

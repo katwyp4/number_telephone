@@ -1,18 +1,20 @@
-public class Firm extends Post{
+public class Firm extends Post {
     private String name;
-    private  String address;
-      public NumberTelephone numberTelephone;
+    private String address;
 
     public Firm(String name, String address, NumberTelephone numberTelephone) {
+        super(numberTelephone);
         this.name = name;
         this.address = address;
-        this.numberTelephone = numberTelephone;
     }
 
-
     @Override
-    public void desciption() {
+    public void description() {
         System.out.println("Firm:"+ name + " " + ", Adress:" + address + ", Telephone:"+numberTelephone);
+    }
+    @Override
+    public String getAddress() {
+        return address;
     }
 
     public  int compareTo(Firm o){
