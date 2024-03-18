@@ -17,8 +17,5 @@ public class Firm extends Post {
         return address;
     }
 
-    public  int compareTo(Firm o){
 
-        return this.name.compareTo(o.name);
-    }
 }

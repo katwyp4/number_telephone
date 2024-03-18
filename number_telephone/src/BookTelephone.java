@@ -22,30 +22,20 @@ public class BookTelephone {
         for (Post post : telephoneBook.values()) {
             post.description();
         }
-
     }
     private static void removeDuplicates(TreeMap<NumberTelephone, Post> telephoneBook) {
 
-        TreeMap<String, Post> uniqueAddresses = new TreeMap<>();
-
-
+        TreeMap<String, Post> map = new TreeMap<>();
         for (Post post : telephoneBook.values()) {
-
             String address = post.getAddress();
-
-            if (!uniqueAddresses.containsKey(address)) {
-
-                uniqueAddresses.put(address, post);
+            if (!map.containsKey(address)) {
+                map.put(address, post);
             }
         }
-
-
         telephoneBook.clear();
 
-        for (Post post : uniqueAddresses.values()) {
+        for (Post post : map.values()) {
             telephoneBook.put(post.getNumberTelephone(), post);
         }
     }
-
-
 }
